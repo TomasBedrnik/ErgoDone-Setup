@@ -17,8 +17,17 @@ And other stuff
 ```
 make git-submodule
 ```
+You also need hid_bootloader_cli from TKG toolkit - you can simply use thisone from Rouji: https://github.com/Rouji/Ergodone-Setup#initial-setup
+```
+# my own fork, solely for the reason of missing scripts for linux
+git clone https://github.com/Rouji/tkg-toolkit.git
+cd tkg-toolkit/linux
+./setup.sh
+```
+And copy the to qmk_firmware folder from ```tkg-toolkit/linux/bin/hid_bootloader_cli```
 
-I'll change it for my own later
+
+I'll change it for my own keymap later
 ```
 git clone https://github.com/Rouji/Ergodone-QMK.git keyboards/ergodone/keymaps/rj
 make clean && make ergodone:rj
