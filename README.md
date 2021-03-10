@@ -37,7 +37,7 @@ make git-submodule
 ```
 Now you need to convert .json from QMK configurator to keymap.c:
 ```
-./qmk json2c ergodone_tb_layout.json
+qmk_firmware/bin/qmk json2c ergodone_tb_layout.json
 ```
 You woul like to modify it - add led signalization for second layout
 https://github.com/TomasBedrnik/ErgoDone-Setup/blob/main/keymap.c
