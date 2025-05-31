@@ -51,3 +51,19 @@ cp keymap.c qmk_firmware/keyboards/ergodone/keymaps/tb/
 make clean && make ergodone:tb
 # hid_bootloader_cli -w -v -mmcu=atmega32u4 ergodone_tb.hex
 ```
+
+# UPDATE 2025
+Some tools are outdated now.
+You need to get specific commit from qmk_firmware git - newer does not have ergodone. 
+```
+git clone https://github.com/qmk/qmk_firmware.git
+git checkout d6ab908272e7f8f391b19aee0c8a9dce9b24f511
+```
+Also I needed to make some minor changes - force use qmk from repo and fix some python errors.
+Or use zip file with modified repo here.
+This is not last commit with ergodone, but it is working.
+
+Also I added exe file hid_bootloader_cli - if the one from Rouji does not work.
+
+# Note
+- to enter firmware flash mode, hold two top right keys on left part of keyboard and connect it: https://github.com/qmk/qmk_firmware/blob/master/keyboards/ktec/ergodone/readme.md
